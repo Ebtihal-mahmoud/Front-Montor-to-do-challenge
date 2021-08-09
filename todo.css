@@ -1,0 +1,351 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Sans", sans-serif;
+  list-style: none;
+}
+/*disktop light mood cross apear on hover
+hover effect on each item in info*/
+:root {
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+  --Very_Light_Grayish_Blue: hsl(236, 33%, 92%);
+  --Light_Grayish_Blue: hsl(233, 11%, 84%);
+  --Dark-Grayish-Blue: hsl(236, 9%, 61%);
+  --Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
+}
+
+body {
+  background: var(--Very_Light_Grayish_Blue);
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.background_img {
+  background: url("images/bg-desktop-light.jpg");
+  min-height: 300px;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.change_mood > * {
+  cursor: pointer;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.sun {
+  display: none;
+}
+
+input {
+  border: 1px solid var(--Dark-Grayish-Blue);
+  color: var(--Very-Dark-Grayish-Blue);
+  transition: all 0.4s ease-in-out 0s;
+}
+
+::placeholder {
+  color: var(--Light_Grayish_Blue);
+}
+
+.ul-style {
+  background: var(--Very-Light-Gray);
+  border: 1px solid var(--Light_Grayish_Blue);
+  border-radius: 5px;
+  color: var(--Very-Dark-Grayish-Blue);
+  transition: all 0.4s ease-in-out 0s;
+}
+
+ul li div {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*dark mood*/
+
+:root {
+  --Very-Dark-Blue: hsl(235, 21%, 11%); /*body*/
+  --Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+  --Light-Grayish-Blue: hsl(234, 39%, 85%);
+  --Light-Grayish-Blue: hsl(236, 33%, 92%);
+  --Dark-Grayish-Blue: hsl(234, 11%, 52%);
+  --Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
+  --Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
+}
+
+.dark_mood_font_color {
+  color: var(--Light_Grayish_Blue);
+}
+
+.dark_mood_body_background {
+  background: var(--Very-Dark-Blue);
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.dark_mood_body_background_img {
+  background: url("images/bg-desktop-dark.jpg");
+  height: 300px;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.dark_mood_input {
+  border: 1px solid var(--Very-Dark-Desaturated-Blue);
+  color: var(--Light_Grayish_Blue);
+  background: var(--Very-Dark-Grayish-Blue);
+}
+.dark_mood_ul {
+  background: var(--Very-Dark-Desaturated-Blue);
+  border: 1px solid var(--Very-Dark-Desaturated-Blue);
+  color: var(--Dark-Grayish-Blue);
+}
+
+.dark_mood_todo {
+  display: flex;
+  justify-content: space-between;
+  height: 45px;
+  border-bottom: 1px solid hsl(237, 14%, 26%);
+  padding: 10px;
+  width: 100%;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.dark_mood_ul li {
+  border-bottom: 1px solid var(--Very-Dark-Grayish-Blue);
+  color: var(--Light_Grayish_Blue);
+}
+
+.dark_mood_ul .line_through {
+  color: var(--Very-Dark-Grayish-Blue);
+}
+
+.dark_mood_ul .info > *:hover {
+  color: var(--Light-Grayish-Blue);
+}
+
+/*globle*/
+.container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 600px;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 50px;
+  color: var(--Very-Light-Gray);
+  text-transform: uppercase;
+  letter-spacing: 8px;
+}
+
+input {
+  height: 45px;
+  width: 100%;
+  border-radius: 5px;
+  margin: 20px auto 0 auto;
+  padding: 0 15px;
+  outline: none;
+  font-size: inherit;
+}
+
+.ul-style {
+  margin: 20px auto;
+}
+
+ul {
+  min-height: 300px;
+  border-radius: 5px;
+}
+
+.todos {
+  line-height: 1.6;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  height: 45px;
+  border-bottom: 1px solid var(--Very_Light_Grayish_Blue);
+  padding: 10px;
+  width: 100%;
+}
+
+li:hover {
+  cursor: grab;
+}
+
+li:hover .cross {
+  display: flex;
+}
+
+.uncheck,
+.check {
+  margin-right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.check {
+  background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  padding: 4.5px;
+  transition: all 0.4s ease-in-out 0s;
+  border-radius: 50%;
+}
+
+.uncheck {
+  display: inline;
+  color: var(--Light_Grayish_Blue);
+}
+
+.check {
+  display: none;
+}
+.line_through {
+  text-decoration: line-through;
+  color: var(--Light-Grayish-Blue);
+}
+
+.cross {
+  align-self: center;
+  position: absolute;
+  right: 20px;
+  display: none;
+}
+
+.cross:hover {
+  cursor: pointer;
+}
+
+li p:hover {
+  cursor: pointer;
+}
+
+p::first-letter {
+  text-transform: capitalize;
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  font-size: 18px;
+  text-transform: capitalize;
+  color: #aaa;
+}
+
+.number {
+  text-transform: lowercase;
+}
+
+.number:hover {
+  color: initial;
+  cursor: auto;
+}
+
+.mobile-info,
+.info-sec {
+  display: none;
+}
+
+.info > *:hover,
+.info-first > *:hover,
+.info-sec > *:hover {
+  color: var(--Dark-Grayish-Blue);
+}
+
+.all:hover,
+.dark_mood_ul .all:hover {
+  color: hsl(220, 98%, 61%);
+}
+
+.hint {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--Dark-Grayish-Blue);
+  margin-top: 20px;
+  cursor: auto;
+}
+
+.info > *,
+.info-first > *,
+.info-sec > *,
+.moon {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    min-width: 330px;
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+
+  .background_img {
+    min-width: 375px;
+    min-height: 200px;
+    background: url(images/bg-mobile-light.jpg) no-repeat center;
+    background-size: cover;
+  }
+
+  .todos {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .dark_mood_body_background_img {
+    background: url(images/bg-mobile-dark.jpg) no-repeat center;
+    min-width: 375px;
+    background-size: cover;
+  }
+
+  .cross {
+    display: block;
+  }
+
+  .info {
+    display: none;
+  }
+
+  .mobile-info {
+    display: block;
+  }
+
+  .dark_mood_body_background .all {
+    color: hsl(220, 98%, 61%);
+  }
+
+  .info-first {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px;
+    color: var(--Dark-Grayish-Blue);
+  }
+
+  .info-sec {
+    display: flex;
+    justify-content: space-evenly;
+    color: var(--Dark-Grayish-Blue);
+    background: var(--Very-Light-Gray);
+    min-height: 50px;
+    align-items: center;
+    border-radius: 5px;
+    text-transform: capitalize;
+  }
+
+  .clear {
+    text-transform: capitalize;
+  }
+
+  .dark_mood_body_background .info-sec {
+    background-color: var(--Very-Dark-Desaturated-Blue);
+  }
+}

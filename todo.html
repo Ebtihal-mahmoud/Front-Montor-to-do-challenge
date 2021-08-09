@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="todo.css" rel="stylesheet" />
+    <title>TO-DO</title>
+  </head>
+  <body>
+    <header class="background">
+      <div class="background_img"></div>
+    </header>
+    <div class="container">
+      <div class="heading">
+        <h1>todo</h1>
+        <div class="change_mood">
+          <img class="moon" src="images/icon-moon.svg" alt="switch mood" />
+          <img class="sun" src="images/icon-sun.svg" alt="switch mood" />
+        </div>
+      </div>
+      <div class="todos">
+        <div>
+          <input
+            type="text"
+            placeholder="&#9711; Create a new todo"
+            
+          />
+          <span class="focus-border"></spanclass>
+        </div>
+
+        <div class="ul-style">
+          <ul class="ul"></ul>
+
+          <div class="info">
+            <span class="number">no todos</span>
+            <span class="all">all</span>
+            <span class="active">active</span>
+            <span class="completed">completed</span>
+            <span class="clear">clear completed</span>
+          </div>
+          <div class="mobile-info">
+            <div class="info-first">
+              <span class="number">no todos</span>
+              <span class="clear">clear completed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="info-sec">
+        <span class="all">all</span> <span class="active">active</span
+        ><span class="completed">completed</span>
+      </div>
+      <p class="hint">Drag and drop to reorder list</p>
+    </div>
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
+      integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js">
+    </script>
+   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js">
+  </script>
+   
+   
+    <script src="todo.js"></script>
+    <script></script>
+  </body>
+</html>
