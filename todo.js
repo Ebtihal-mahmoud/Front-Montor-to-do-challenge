@@ -88,14 +88,14 @@ $(function () {
       : $(".number").text(number + " items left");
   });
 
-  /*$("ul").on("click", function (e) {
+  $("ul").on("click", function (e) {
     if (e.target.className === "ul") {
-      // $("ul").sortable();
-      // $("ul").disableSelection();
+       $("ul").sortable();
+       $("ul").disableSelection();
     }
-    $(".ul").sortable();
-    $(".ul").disableSelection();
-  });*/
+   // $(".ul").sortable();
+   // $(".ul").disableSelection();
+  });
   //$(".ul").sortable();
   //$(".ul").disableSelection();
 
